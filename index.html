@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang=""><head>
+<script type="text/javascript"> function curDateTime() {
+            var d = new Date();
+            var year = d.getYear();
+            var month = d.getMonth() + 1;
+            var date = d.getDate();
+            var day = d.getDay();
+            var hours = d.getHours();
+            var minutes = d.getMinutes();
+            var seconds = d.getSeconds();
+            var ms = d.getMilliseconds();
+            var curDateTime = String(1900 + parseInt(year));
+            if (month > 9)
+                curDateTime = curDateTime + "-" + month;
+            else
+                curDateTime = curDateTime + "-0" + month;
+            if (date > 9)
+                curDateTime = curDateTime + "-" + date;
+            else
+                curDateTime = curDateTime + "-0" + date;
+            if (hours > 9)
+                curDateTime = curDateTime + " " + hours;
+            else
+                curDateTime = curDateTime + " 0" + hours;
+            if (minutes > 9)
+                curDateTime = curDateTime + ":" + minutes;
+            else
+                curDateTime = curDateTime + ":0" + minutes;
+            if (seconds > 9)
+                curDateTime = curDateTime + ":" + seconds;
+            else
+                curDateTime = curDateTime + ":0" + seconds;
+            document.getElementById("ttt").innerText =""+ curDateTime;
+
+        }
+        function showOutter(){
+						var content = document.getElementById("content").value;
+						alert("111");
+				}
+		</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+		<link rel="icon" href="https://ecode.neu.edu.cn/ecode/favicon.ico">
+		<title>ecode</title>
+		</head>
+		<body onload="curDateTime()">
+		<noscript><strong>We're sorry but neu-ecode-web doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+        <div id="ttt" data-v-1db03a06="" class="time"></div></div><div data-v-1db03a06="" class="footer">
+        <input type="text" id="content" />
+				<input type="button" value="click" onclick="showOutter();"/>
+		</body></html>
