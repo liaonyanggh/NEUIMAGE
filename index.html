@@ -127,6 +127,15 @@ html{-webkit-tap-highlight-color:transparent}body{margin:0;font-family:-apple-sy
         function setTime() {
             document.getElementById("ttt").innerText =""+ curDateTime();
         }
+	function setInfo() {
+		var e = document.getElementById("distress");
+		var text= e.options[e.selectedIndex].text;
+		var add = document.getElementById("add").childNodes;
+		var child= add[0];
+		child.nodeValue=text;
+            document.getElementById("input-box").style.display = "none";
+            document.getElementById("app").style.display = "";
+        }
 		
 		</script>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -136,6 +145,16 @@ html{-webkit-tap-highlight-color:transparent}body{margin:0;font-family:-apple-sy
 		<link rel="icon" href="https://ecode.neu.edu.cn/ecode/favicon.ico">
 		<title>e码通</title>
 		</head>
+		<div class="input-box" id="input-box" style="text-align: center;">
+		<br/>
+		<label>地  址：<select id="distress">
+		<option value ="南湖校区南门">南湖校区南门</option>
+		<option value ="南湖校区西门">南湖校区西门</option>
+		<option value ="南湖校区北门">南湖校区北门</option>
+		</select></label>
+		<br/>
+		<button onclick="setInfo()">“进入校园”</button>
+		</div>
 		<body onload="setTime()">
 		<noscript><strong>We're sorry but neu-ecode-web doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
 		<div id="app"><div data-v-1db03a06=""><div data-v-1db03a06="" class="header">
